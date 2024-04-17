@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/favicon.png" type="image/png">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <div class="accordion" id="sidebarAccordion">
+                        <!-- Predict Intervals Section -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Forecast Solar Energy
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="/form_num_intervals">
+                                                <span data-feather="home"></span>
+                                                Predict Intervals
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- View Data Section -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Display Table Information
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/real_data">
+                                                <span data-feather="file"></span>
+                                                Display Real Data
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/predictions">
+                                                <span data-feather="file"></span>
+                                                Display Predictions
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/merge_json">
+                                                <span data-feather="file"></span>
+                                                Display Real and Predictions Data
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Plot Data Section -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Explore Data with Graphs
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/plotreal">
+                                                <span data-feather="file"></span>
+                                                Explore Real Data
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/plotpredictionintervals">
+                                                <span data-feather="file"></span>
+                                                Explore Predictions
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/plotdatatogether">
+                                                <span data-feather="file"></span>
+                                                Explore Real and Predictions Data
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Plot Data Section -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingfour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                    Landing Page
+                                </button>
+                            </h2>
+                            <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/">
+                                                <span data-feather="file"></span>
+                                                Return to Landing Page
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Solar Power Forecasting Dashboard</h1>
+                </div>
+
+                <!-- Cards for data presentation -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Forecast Solar Energy</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Forecast Solar Energy</h5>
+                                <p class="card-text">In this feature, you have the capability to forecast the energy
+                                    generated at 15-minute intervals.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Display</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Display Table Information</h5>
+                                <p class="card-text">This feature is designed to provide a detailed display of solar
+                                    power forecasting data. It allows users to access comprehensive insights, enhancing
+                                    decision-making processes with precise and timely information.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Explore Data</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Explore Data with Graphs</h5>
+                                <p class="card-text">This feature was developed to enable the visualization of data
+                                    through detailed graphics. It supports enhanced understanding and analysis, allowing
+                                    users to see trends and patterns at a glance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
